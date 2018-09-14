@@ -58,12 +58,10 @@
 <time class="post__meta-date meta-date" datetime="2018-09-14T21:50:50">September 14, 2018</time></div>
 	</header>
 	<div class="content list__excerpt post__content clearfix">
-		###搭建环境(macOS)
-1.安装Homebrew
+		搭建环境(macOS) 1.安装Homebrew
 /usr/bin/ruby -e &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)&quot;  2.安装Hugo
 brew install hugo  3.安装Git
-###搭建网站
-1.创建目录
+搭建网站 1.创建目录
 hugo new site &lt;SITE_NAME&gt;  执行后会在当前目录下创建一个名为SITE_NAME的文件夹，所有网站相关的文件都在里面。
 2.使用主题
 cd &lt;SITE_NAME&gt; git init git submodule add &lt;THEME_URL&gt; themes/&lt;THEME_NAME&gt;  在项目根目录初始化git仓库，添加主题文件至themes文件夹。 在这里初始化git仓库的目的仅仅是为了使用git命令添加主题。 当然也可以直接在这里把项目与GitHub上的仓库关联：
@@ -71,7 +69,6 @@ git remote add origin &lt;REMOTE_URL&gt;  注意：在.gitignore文件中增加p
 这里有各式各样的主题：https://themes.gohugo.io/ 在&lt;SITE_NAME&gt;/config.toml中指定主题：
 theme = &quot;&lt;THEME_NAME&gt;&quot;  第一次指定主题也可以使用命令：
 # Edit your config.toml configuration file # and add the theme. echo 'theme = &quot;&lt;THEME_NAME&gt;&quot;' &gt;&gt; config.toml  还可以在config.toml中配置更多的主题效果，详情查看主题的文档。
-3.增加文章
 	</div>
 </article>
 </main>
