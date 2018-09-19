@@ -3,11 +3,6 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>/post/git-submodule/</loc>
-    <lastmod>2018-09-14T23:44:13+08:00</lastmod>
-  </url>
-  
-  <url>
     <loc>/post/building-website-with-hugo-github/</loc>
     <lastmod>2018-09-14T21:50:50+08:00</lastmod>
   </url>
@@ -31,7 +26,7 @@
   
   <url>
     <loc>/post/</loc>
-    <lastmod>2018-09-14T23:44:13+08:00</lastmod>
+    <lastmod>2018-09-14T21:50:50+08:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -43,7 +38,7 @@
   
   <url>
     <loc>/</loc>
-    <lastmod>2018-09-14T23:44:13+08:00</lastmod>
+    <lastmod>2018-09-14T21:50:50+08:00</lastmod>
     <priority>0</priority>
   </url>
   
