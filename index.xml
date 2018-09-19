@@ -1,42 +1,33 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>My New Hugo Site</title>
-    <link>http://example.org/</link>
-    <description>Recent content on My New Hugo Site</description>
+    <title>博客名字还没想好</title>
+    <link>/</link>
+    <description>Recent content on 博客名字还没想好</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
+    <language>zh-CN</language>
     <lastBuildDate>Fri, 14 Sep 2018 23:44:13 +0800</lastBuildDate>
     
-	<atom:link href="http://example.org/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Git Submodule</title>
-      <link>http://example.org/post/git-submodule/</link>
+      <link>/post/git-submodule/</link>
       <pubDate>Fri, 14 Sep 2018 23:44:13 +0800</pubDate>
       
-      <guid>http://example.org/post/git-submodule/</guid>
+      <guid>/post/git-submodule/</guid>
       <description></description>
     </item>
     
     <item>
       <title>使用Hugo &#43; GitHub搭建静态网站</title>
-      <link>http://example.org/post/building-website-with-hugo-github/</link>
+      <link>/post/building-website-with-hugo-github/</link>
       <pubDate>Fri, 14 Sep 2018 21:50:50 +0800</pubDate>
       
-      <guid>http://example.org/post/building-website-with-hugo-github/</guid>
-      <description>搭建环境(macOS) 1.安装Homebrew
-/usr/bin/ruby -e &amp;quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)&amp;quot;  2.安装Hugo
-brew install hugo  3.安装Git
-搭建网站 1.创建目录
-hugo new site &amp;lt;SITE_NAME&amp;gt;  执行后会在当前目录下创建一个名为SITE_NAME的文件夹，所有网站相关的文件都在里面。
-2.使用主题
-cd &amp;lt;SITE_NAME&amp;gt; git init git submodule add &amp;lt;THEME_URL&amp;gt; themes/&amp;lt;THEME_NAME&amp;gt;  在项目根目录初始化git仓库，添加主题文件至themes文件夹。 在这里初始化git仓库的目的仅仅是为了使用git命令添加主题。 当然也可以直接在这里把项目与GitHub上的仓库关联：
-git remote add origin &amp;lt;REMOTE_URL&amp;gt;  注意：在.gitignore文件中增加public/，原因见下文。
-这里有各式各样的主题：https://themes.gohugo.io/ 在&amp;lt;SITE_NAME&amp;gt;/config.toml中指定主题：
-theme = &amp;quot;&amp;lt;THEME_NAME&amp;gt;&amp;quot;  第一次指定主题也可以使用命令：
-# Edit your config.toml configuration file # and add the theme. echo &#39;theme = &amp;quot;&amp;lt;THEME_NAME&amp;gt;&amp;quot;&#39; &amp;gt;&amp;gt; config.toml  还可以在config.toml中配置更多的主题效果，详情查看主题的文档。</description>
+      <guid>/post/building-website-with-hugo-github/</guid>
+      <description>&lt;p&gt;Hugo是一个开源的静态网站生成器。
+&lt;/p&gt;</description>
     </item>
     
   </channel>

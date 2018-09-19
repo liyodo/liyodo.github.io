@@ -1,24 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Posts on 博客名字还没想好</title>
-    <link>/post/</link>
-    <description>Recent content in Posts on 博客名字还没想好</description>
+    <title>Development on 博客名字还没想好</title>
+    <link>/categories/development/</link>
+    <description>Recent content in Development on 博客名字还没想好</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-CN</language>
-    <lastBuildDate>Fri, 14 Sep 2018 23:44:13 +0800</lastBuildDate>
+    <lastBuildDate>Fri, 14 Sep 2018 21:50:50 +0800</lastBuildDate>
     
-	<atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="/categories/development/index.xml" rel="self" type="application/rss+xml" />
     
-    
-    <item>
-      <title>Git Submodule</title>
-      <link>/post/git-submodule/</link>
-      <pubDate>Fri, 14 Sep 2018 23:44:13 +0800</pubDate>
-      
-      <guid>/post/git-submodule/</guid>
-      <description></description>
-    </item>
     
     <item>
       <title>使用Hugo &#43; GitHub搭建静态网站</title>

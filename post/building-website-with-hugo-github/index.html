@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en-us">
+<html lang="zh-CN">
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -7,7 +7,12 @@
 	<title>使用Hugo &#43; GitHub搭建静态网站</title>
 	<meta name="description" content="">
 	<meta name="generator" content="Hugo 0.48" />
-	
+	<meta property="og:title" content="使用Hugo &#43; GitHub搭建静态网站" />
+<meta property="og:description" content="Hugo是一个开源的静态网站生成器。
+" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="/post/building-website-with-hugo-github/" /><meta property="article:published_time" content="2018-09-14T21:50:50&#43;08:00"/>
+<meta property="article:modified_time" content="2018-09-14T21:50:50&#43;08:00"/>
 	
 	<link rel="dns-prefetch" href="//fonts.googleapis.com">
 	<link rel="dns-prefetch" href="//fonts.gstatic.com">
@@ -22,8 +27,8 @@
 		<header class="header">
 	<div class="container">
 		<div class="logo" role="banner">
-			<a class="logo__link" href="/" title="My New Hugo Site" rel="home">
-				<div class="logo__title">My New Hugo Site</div>
+			<a class="logo__link" href="/" title="博客名字还没想好" rel="home">
+				<div class="logo__title">博客名字还没想好</div>
 				
 			</a>
 		</div>
@@ -38,34 +43,39 @@
 		<header class="post__header">
 			<h1 class="post__title">使用Hugo &#43; GitHub搭建静态网站</h1><div class="post__meta meta">
 <svg class="icon icon-time" width="16" height="14" viewBox="0 0 16 16"><path d="m8-.0000003c-4.4 0-8 3.6-8 8 0 4.4000003 3.6 8.0000003 8 8.0000003 4.4 0 8-3.6 8-8.0000003 0-4.4-3.6-8-8-8zm0 14.4000003c-3.52 0-6.4-2.88-6.4-6.4000003 0-3.52 2.88-6.4 6.4-6.4 3.52 0 6.4 2.88 6.4 6.4 0 3.5200003-2.88 6.4000003-6.4 6.4000003zm.4-10.4000003h-1.2v4.8l4.16 2.5600003.64-1.04-3.6-2.1600003z"/></svg>
-<time class="post__meta-date meta-date" datetime="2018-09-14T21:50:50">September 14, 2018</time></div>
+<time class="post__meta-date meta-date" datetime="2018-09-14T21:50:50">September 14, 2018</time>
+<span class="post__meta-categories meta-categories">
+	<svg class="icon icon-category" width="16" height="16" viewBox="0 0 16 16"><path d="m7 2l1 2h8v11h-16v-13z"/></svg>
+	<span class="meta-categories__list"><a class="meta-categories__link" href="/categories/development" rel="category">Development</a></span>
+</span></div>
 		</header><div class="content post__content clearfix">
-			
+			<p>Hugo是一个开源的静态网站生成器。
+</p>
 
-<h3 id="搭建环境-macos">搭建环境(macOS)</h3>
+<h2 id="搭建环境-macos">搭建环境(macOS)</h2>
 
-<p>1.安装Homebrew</p>
+<h3 id="安装homebrew">安装Homebrew</h3>
 
 <pre><code>/usr/bin/ruby -e &quot;$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)&quot;
 </code></pre>
 
-<p>2.安装Hugo</p>
+<h3 id="安装hugo">安装Hugo</h3>
 
 <pre><code>brew install hugo
 </code></pre>
 
-<p>3.安装Git</p>
+<h3 id="安装git">安装Git</h3>
 
-<h3 id="搭建网站">搭建网站</h3>
+<h2 id="搭建网站">搭建网站</h2>
 
-<p>1.创建目录</p>
+<h3 id="创建目录">创建目录</h3>
 
 <pre><code>hugo new site &lt;SITE_NAME&gt;
 </code></pre>
 
 <p>执行后会在当前目录下创建一个名为SITE_NAME的文件夹，所有网站相关的文件都在里面。</p>
 
-<p>2.使用主题</p>
+<h3 id="使用主题">使用主题</h3>
 
 <pre><code>cd &lt;SITE_NAME&gt;
 git init
@@ -81,8 +91,9 @@ git submodule add &lt;THEME_URL&gt; themes/&lt;THEME_NAME&gt;
 
 <p>注意：在<code>.gitignore</code>文件中增加<code>public/</code>，原因见下文。</p>
 
-<p>这里有各式各样的主题：<a href="https://themes.gohugo.io/">https://themes.gohugo.io/</a>
-在<code>&lt;SITE_NAME&gt;/config.toml</code>中指定主题：</p>
+<p><a href="https://themes.gohugo.io/" title="Hugo Themes">这里</a>有各式各样的主题.</p>
+
+<p>在<code>&lt;SITE_NAME&gt;/config.toml</code>中指定主题：</p>
 
 <pre><code>theme = &quot;&lt;THEME_NAME&gt;&quot;
 </code></pre>
@@ -96,7 +107,7 @@ echo 'theme = &quot;&lt;THEME_NAME&gt;&quot;' &gt;&gt; config.toml
 
 <p>还可以在config.toml中配置更多的主题效果，详情查看主题的文档。</p>
 
-<p>3.增加文章</p>
+<h3 id="增加文章">增加文章</h3>
 
 <pre><code>hugo new posts/my-first-post.md
 </code></pre>
@@ -112,30 +123,36 @@ draft: true
 
 <p>在Front Matter下面就可以输入文章正文啦。</p>
 
-<p>4.启动Hugo服务</p>
+<h3 id="启动hugo服务">启动Hugo服务</h3>
 
 <pre><code>hugo server -D
 hugo server -t &lt;THEME_NAME&gt; --buildDrafts
 </code></pre>
 
-<p>常用参数：
--D, &ndash;buildDrafts include content marked as draft
--t, &ndash;theme string theme to use (located in /themes/THEME_NAME/)
-新创建文章的front matter中包含<code>draft: true</code>属性，这表示该文章为草稿状态。若不使用<code>-D</code>标记，草稿是不会在网站中显示的。
-<code>-t</code>用于指定网站使用的主题，例如themes目录下有名为&rdquo;mainroad&rdquo;的主题，则可使用<code>-t mainroad</code>。</p>
+<p>常用参数：</p>
 
-<p>5.访问网站
-<a href="http://localhost:1313/">http://localhost:1313/</a></p>
+<ul>
+<li>-D, &ndash;buildDrafts include content marked as draft
+新创建文章的front matter中包含<code>draft: true</code>属性，这表示该文章为草稿状态。若不使用<code>-D</code>标记，草稿是不会在网站中显示的。</li>
+<li>-t, &ndash;theme string theme to use (located in /themes/THEME_NAME/)
+<code>-t</code>用于指定网站使用的主题，例如themes目录下有名为&rdquo;mainroad&rdquo;的主题，则可使用<code>-t mainroad</code>。</li>
+</ul>
 
-<h3 id="部署github-page">部署GitHub Page</h3>
+<h3 id="访问网站">访问网站</h3>
 
-<p>1.创建GitHub Page
-GitHub Page有两种，分别是用户/组织网站（User or organization site）和项目网站（Project site），我选择前者。
-与创建一个普通的repository方法基本相同，只是repository的名字必须是<USER_NAME>.github.io，
-USER_NAME为Github账号的用户名或组织名，必须完全一致。</p>
+<p><a href="http://localhost:1313/">http://localhost:1313/</a></p>
 
-<p>2.为public目录创建submodule
-首先前提是使用浏览器访问过网站，并按下Ctrl+C杀掉服务。
+<h2 id="部署github-page">部署GitHub Page</h2>
+
+<h3 id="创建github-page">创建GitHub Page</h3>
+
+<p>GitHub Page有两种，分别是用户/组织网站（User or organization site）和项目网站（Project site），我选择前者。
+与创建一个普通的repository方法基本相同，只是repository的名字必须是&lt;USERNAME&gt;.github.io，
+USERNAME为Github账号的用户名或组织名，必须完全一致。</p>
+
+<h3 id="为public目录创建submodule">为public目录创建submodule</h3>
+
+<p>首先前提是使用浏览器访问过网站，并按下Ctrl+C杀掉服务。
 然后使用<code>rm -rf public</code>完全删除public目录(我执行操作2后没有生成public目录，所以跳过了这一步)。
 然后执行命令将刚创建的GitHub Page添加为submodule，位于public目录下：</p>
 
@@ -144,8 +161,9 @@ USER_NAME为Github账号的用户名或组织名，必须完全一致。</p>
 
 <p>这样的效果是public目录下的文件会单独提交到GitHub Page仓库。</p>
 
-<p>3.部署脚本
-这个名为<code>deploy.sh</code>的脚本用于构建并提交public目录下的内容到GitHub Page仓库。
+<h3 id="部署脚本">部署脚本</h3>
+
+<p>这个名为<code>deploy.sh</code>的脚本用于构建并提交public目录下的内容到GitHub Page仓库。
 使用<code>chmod +x deploy.sh</code>赋予执行权限并放在项目根目录下。
 用法：</p>
 
@@ -183,32 +201,78 @@ cd ..
 <p>因为public文件夹作为GitHub Page submodule，所以项目仓库要忽略public文件夹，
 这样在GitHub仓库上看public文件夹是这样的：&rdquo;public @ cfdf4a0&rdquo;，点击可以跳转到GitHub Page仓库。</p>
 
-<p>4.完成！通过https://<USERNAME>.github.io浏览网站。</p>
+<h3 id="访问网站-1">访问网站</h3>
+
+<p>通过https://&lt;USERNAME&gt;.github.io浏览网站。</p>
+
+<h2 id="others">Others</h2>
+
+<p>使用mainroad主题时，主页会将文章内容忽略markdown格式排版直接显示出来，很丑。想避免这种情况，可以使用<code>&lt;!--more--&gt;</code>。
+在它之前的内容会以markdown格式排版后的样式显示。在它之后的内容不会显示。
+不知道是只适用于mainroad主题，还是markdown通用的，还是Hugo通用的。</p>
 
 <h3 id="todo">Todo</h3>
 
-<p>1.了解git submodule，包括更新、删除等。
-<a href="https://git-scm.com/book/zh/v2/Git-%E5%B7%A5%E5%85%B7-%E5%AD%90%E6%A8%A1%E5%9D%97">https://git-scm.com/book/zh/v2/Git-%E5%B7%A5%E5%85%B7-%E5%AD%90%E6%A8%A1%E5%9D%97</a></p>
+<ul>
+<li>了解git submodule，包括更新、删除等。<a href="https://git-scm.com/book/zh/v2/Git-%E5%B7%A5%E5%85%B7-%E5%AD%90%E6%A8%A1%E5%9D%97" title="Git - 子模块">Git - 子模块</a></li>
+</ul>
 
-<h3 id="参考资料">参考资料</h3>
+<h2 id="参考资料">参考资料</h2>
 
-<p><a href="https://gohugo.io/">https://gohugo.io/</a>
-<a href="https://pages.github.com/">https://pages.github.com/</a></p>
-
+<ul>
+<li><a href="https://gohugo.io/">Hugo</a></li>
+<li><a href="http://www.gohugo.org/" title="Hugo中文文档">Hugo中文文档</a></li>
+<li><a href="https://pages.github.com/">GitHub Pages</a></li>
+<li><a href="https://github.com/Vimux/Mainroad">Vimux/Mainroad</a></li>
+</ul>
 		</div>
 		
+<div class="post__tags tags clearfix">
+	<svg class="icon icon-tag" width="16" height="16" viewBox="0 0 16 16"><path d="M16 9.5c0 .373-.24.74-.5 1l-5 5c-.275.26-.634.5-1 .5-.373 0-.74-.24-1-.5L1 8a2.853 2.853 0 0 1-.7-1C.113 6.55 0 5.973 0 5.6V1.4C0 1.034.134.669.401.401.67.134 1.034 0 1.4 0h4.2c.373 0 .95.113 1.4.3.45.187.732.432 1 .7l7.5 7.502c.26.274.5.632.5.998zM3.5 5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z"/></svg>
+	<ul class="tags__list">
+		<li class="tags__item"><a class="tags__link btn" href="/tags/hugo/" rel="tag">Hugo</a></li>
+	</ul>
+</div>
 	</article>
 </main>
 
+<div class="authorbox clearfix">
+	<figure class="authorbox__avatar">
+		<img alt="liyodo avatar" src="/img/avatar.png" class="avatar" height="90" width="90">
+	</figure>
+	<div class="authorbox__header">
+		<span class="authorbox__name">About liyodo</span>
+	</div>
+</div>
 
+<nav class="post-nav flex">
+	<div class="post-nav__item post-nav__item--next">
+		<a class="post-nav__link" href="/post/git-submodule/" rel="next"><span class="post-nav__caption">Next&thinsp;»</span><p class="post-nav__post-title">Git Submodule</p></a>
+	</div>
+</nav>
 
 
 			</section>
-			
+			<aside class="sidebar">
+<div class="widget-categories widget">
+	<h4 class="widget__title">Categories</h4>
+	<div class="widget__content">
+		<ul class="widget__list">
+			<li class="widget__item"><a class="widget__link" href="/categories/development">Development</a></li>
+		</ul>
+	</div>
+</div>
+<div class="widget-taglist widget">
+	<h4 class="widget__title">Tags</h4>
+	<div class="widget__content">
+		<a class="widget-taglist__link widget__link btn" href="/tags/hugo" title="Hugo">Hugo</a>
+	</div>
+</div>
+</aside>
 		</div>
 		<footer class="footer">
 	<div class="container">
-		<div class="footer__copyright">&copy; 2018 My New Hugo Site. <span class="footer__copyright-credits">Generated with <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> and <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad</a> theme.</span></div>
+		<div class="footer__copyright">&copy; 2018 博客名字还没想好. <span class="footer__copyright-credits">Generated with <a href="https://gohugo.io/" rel="nofollow noopener" target="_blank">Hugo</a> and <a href="https://github.com/Vimux/Mainroad/" rel="nofollow noopener" target="_blank">Mainroad</a> theme.</span></div>
 	</div>
 </footer>
 	</div>
