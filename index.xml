@@ -13,10 +13,10 @@
     
     <item>
       <title>使用Hugo &#43; GitHub搭建静态网站</title>
-      <link>/post/building-website-with-hugo-github/</link>
+      <link>/post/dev/building-website-with-hugo-github/</link>
       <pubDate>Fri, 14 Sep 2018 21:50:50 +0800</pubDate>
       
-      <guid>/post/building-website-with-hugo-github/</guid>
+      <guid>/post/dev/building-website-with-hugo-github/</guid>
       <description>&lt;p&gt;Hugo是一个开源的静态网站生成器。
 &lt;/p&gt;</description>
     </item>
